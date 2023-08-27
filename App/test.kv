@@ -1,0 +1,46 @@
+
+<RootLayout>
+    MyLayout:  
+        BoxLayout:
+           
+        
+            orientation: "vertical"
+            size: root.width, root.height
+
+            padding: 50
+            spacing: 20
+            Image:
+                id: cardimage
+                source: app.flagfile
+               
+            
+            TextInput:
+                multiline: False
+                text: "Enter Guess Here"
+                on_touch_down: if self.collide_point(*args[1].pos): self.text = ""
+                id: user_input
+
+                
+            Button:
+                text: "Submit"
+                font_size: 32
+                on_press: root.correct1()
+                id:button_one
+                
+                
+            
+        
+        
+            
+        FloatLayout:
+            Label:
+                
+                pos: 1200, 910
+                id: chill
+                font_size: 75
+                
+                
+                
+
+                
+                
